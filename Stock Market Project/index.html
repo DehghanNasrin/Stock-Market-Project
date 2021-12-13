@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Stock Market</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2">
+          <div class="well">
+            <h5>Ticker List:</h5>
+            <select
+              id="tickerDropdown"
+              onchange="inputValueChangted()"
+            ></select>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="well">
+            <h5>From Date:</h5>
+            <input
+              type="date"
+              id="fromDate"
+              name="Date"
+              min="2010-01-01"
+              max="3000-01-01"
+              onfocus="this.max=new Date().toISOString().split('T')[0]"
+              onchange="inputValueChangted()"
+            />
+          </div>
+        </div>
+        <div>
+          <input type="hidden" id="toDate" name="toDate" />
+        </div>
+        <div class="col-md-2">
+            <div class="well">
+              <h5>Duration:</h5>
+              <select
+                id="durationDropdown"
+                onchange="inputValueChangted()"
+              >
+              <option value="oneDay">1 Day</option>
+              <option value="oneWeek" selected>1 Week</option>
+              <option value="oneMonth">1 Month</option>
+              <option value="threeMonths">3 Months</option>
+              <option value="sixMonths">6 Months</option>
+              <option value="oneYear">1 Year</option>
+            </select>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="container">
+      <!-- Candlestick chart -->
+    </div>
+    <div class="container">
+      <div class="row">
+        <p id="news">
+        </p>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
