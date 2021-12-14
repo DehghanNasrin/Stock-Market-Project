@@ -2,6 +2,10 @@
 The Stock Market project gathers the most active stocks based on yahoo finance and call some implemented APIs in order to retrive pricing information and then visualize them on 3 different stock charts.
 
 
+![stocks](https://user-images.githubusercontent.com/84975225/146045731-dbac2c8d-bde7-4fa8-9fe4-5c6420461d1a.jpg)
+
+
+
 In order to visit the website you need to take these steps:
 
 1- Run app.py script
